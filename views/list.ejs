@@ -1,0 +1,41 @@
+<%- include("components/frame.ejs") %>
+
+<!--These divs are used for displaying All the details of the records.-->
+<!--Will be hidden by default, only be visible when clicked on any row item.-->
+<div id="overlay" class="overlay-full-screen hidden" onclick="closeInfo()"></div>
+<div id="info" class="info hidden">
+  <span id="kod-tech" class="book-title">Tech Code</span>
+  <span class="book-detail">Tanggal Terima : <span class="detail-value" id="tgl-trm"> Tanggal </span></span>
+  <span class="book-detail">JOB Number : <span class="detail-value" id="job-num"> Number </span></span>
+  <span class="book-detail">Job Type : <span class="detail-value" id="job-typ"> Type </span></span>
+  <span class="book-detail">Point : <span class="detail-value" id="point"> 2 </span></span>
+  <button onclick="closeInfo()" id="close-info">X</button>
+</div>
+
+<div class="form-heading">Data Pencatatan Point Teknisi</div>
+<div class="table">
+  <table cellspacing="0" cellpadding="0">
+    <tr>
+      <th>ID.</th>
+      <th>Tgl Terima</th>
+      <th>Kode Teknisi</th>
+      <th>Job Number</th>
+      <th>Job Type</th>
+      <th>Caliber</th>
+      <th>Point</th>
+    </tr>
+    <% data.forEach((element) => { %>
+    <tr id="<%= element._id %>" class="data-rows">
+      <td><%= element._id %></td>
+      <td><%= element.tgl_trm %></td>
+      <td><%= element.kod_tech %></td>
+      <td><%= element.job_num %></td>
+      <td><%= element.job_typ %></td>
+      <td><%= element.cal %></td>
+      <td><%= element.point %></td>
+    </tr>
+    <% }); %>
+  </table>
+</div>
+
+<%- include("components/end.ejs") %>
