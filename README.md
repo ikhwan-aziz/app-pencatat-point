@@ -4,4 +4,4 @@ Prototype aplikasi pencatatan point untuk teknisi jam tangan ini bertujuan untuk
 
 Pada repositori ini berisikan source-code prototype aplikasi pencatatan point yang dikembangkan dari master aplikasi "Book-Manager" yang diperoleh dari sumber berikut : https://github.com/bilal0558/Books-Manager
 
-Deployment prototype aplikasi dalam bentuk website masih dalam pengerjaan. 
+Deployment prototype aplikasi bisa diaksses pada alamat : https://app-pencatatan-point.dyafaqih.site/ 
